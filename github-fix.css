@@ -1,0 +1,79 @@
+
+/* GitHub Pages fixes for BIỂU ĐỒ VÀNG static export */
+:root{
+  --brand-primary:#0369a1;
+  --brand-secondary:#0ea5e9;
+  --brand-accent:#06b6d4;
+  --text-secondary:#64748b;
+  --card:#ffffff;
+}
+html{scroll-behavior:smooth;}
+body{min-height:100vh;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;height:auto;}
+#loading-overlay{display:none!important;}
+/* Keep sticky header clean on GitHub */
+header{box-shadow:0 6px 24px rgba(15,23,42,.06);}
+.logo-container img{max-height:70px;object-fit:contain;}
+/* Brand color aliases used by generated classes */
+.text-brand-primary{color:var(--brand-primary)!important;}
+.bg-brand-primary{background-color:var(--brand-primary)!important;}
+.border-brand-primary{border-color:var(--brand-primary)!important;}
+.hover\:bg-brand-primary:hover{background-color:var(--brand-primary)!important;}
+.hover\:text-brand-primary:hover{color:var(--brand-primary)!important;}
+.text-text-secondary{color:var(--text-secondary)!important;}
+.from-brand-primary{--tw-gradient-from:var(--brand-primary)!important;}
+.to-brand-accent\/20{--tw-gradient-to:rgba(6,182,212,.2)!important;}
+/* Dropdown/menu fixes */
+.group:hover .group-hover\:opacity-100{opacity:1!important;}
+.group:hover .group-hover\:visible{visibility:visible!important;}
+.group:hover .group-hover\:rotate-180{transform:rotate(180deg)!important;}
+#mobileMenu.is-open{transform:translateX(0)!important;}
+#backdrop.is-open{display:block!important;}
+[data-submenu-toggle] svg{transition:transform .2s ease;}
+[data-submenu-toggle].is-open svg{transform:rotate(180deg);}
+.mobile-submenu-open{display:flex!important;}
+/* Search */
+#search-input.is-open{display:block!important;}
+#close-search.is-open{display:inline-block!important;}
+/* Ticker */
+.marquee-container{mask-image:linear-gradient(to right,transparent,black 6%,black 94%,transparent);}
+.animate-marquee{will-change:transform;}
+.animate-marquee:hover{animation-play-state:paused;}
+/* Chart and table stability */
+#goldChartCanvas,#silverChartCanvas,#goldLwNavigatorChartWrap,#silverLwNavigatorChartWrap{min-height:100%;}
+.github-chart-fallback{width:100%;height:100%;min-height:240px;}
+.home-navigator-selection{left:65%;width:30%;}
+.market-tab[data-active="true"]{background:var(--brand-primary)!important;color:#fff!important;}
+.market-panel.hidden,.panel.hidden,.hidden{display:none!important;}
+/* Province table */
+#goldProvincesTableBody tr.github-filter-hidden{display:none!important;}
+.price-cell{white-space:nowrap;}
+/* Improve card look if Tailwind CSS loads late */
+.shadow-sm,.shadow-xl,.shadow-2xl{transition:box-shadow .25s ease,transform .25s ease;}
+.shadow-sm:hover{transform:translateY(-2px);}
+.rounded-lg{border-radius:.75rem;}
+.rounded-md{border-radius:.5rem;}
+/* Footer/long page */
+footer{background:#f8fafc;}
+/* Responsive guard */
+@media(max-width:1023px){
+  header .container{max-width:100%;}
+  .logo-container h1{font-size:1.25rem;line-height:1.2;}
+  .logo-container p{font-size:.72rem;}
+}
+@media(max-width:640px){
+  section{padding-top:2rem!important;padding-bottom:2rem!important;}
+  .text-4xl{font-size:1.75rem!important;}
+  .text-5xl{font-size:2rem!important;}
+  .grid{gap:1rem;}
+  .marquee-container{margin-left:.25rem;margin-right:.25rem;}
+  #search-input{left:auto!important;right:0;width:70vw!important;top:2.8rem!important;background:#fff;z-index:110;}
+  table{font-size:12px;}
+  th,td{padding:.55rem .45rem!important;}
+}
+/* Lightweight chart fallback message */
+.github-chart-note{
+  display:flex;align-items:center;justify-content:center;height:100%;
+  color:#64748b;font-size:.9rem;text-align:center;padding:1rem;
+}
