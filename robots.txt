@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://USERNAME.github.io/bieudovang-hub/sitemap.xml
+Sitemap: https://bieudovangcom.github.io/bieudovangcom/sitemap.xml
